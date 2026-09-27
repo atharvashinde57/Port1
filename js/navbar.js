@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="contact.html" class="nav-item">
                         <span class="nav-text">Contact</span>
                     </a>
+                    <a href="pdf/Python_AI_Resume2026.pdf" target="_blank" class="nav-item" style="color: var(--accent-color);">
+                        <span class="nav-text"><i class="fas fa-file-pdf" style="font-size: 0.85rem; margin-right: 0.3rem;"></i>Resume</span>
+                    </a>
                 </div>
             </nav>
         `;
