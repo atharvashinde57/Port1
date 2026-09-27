@@ -4,9 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Atharva</title>
+    <title>Contact - Atharva Shinde</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .contact-card h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--secondary-text);
+            font-weight: 500;
+        }
+
+        .contact-card a, .contact-card p {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            text-decoration: none;
+            word-break: break-all;
+            margin: 0;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -14,39 +65,43 @@
 
     <main class="container">
         <section class="section">
-            <h4 class="nav-number" style="font-size: 1rem; margin-bottom: 2rem; color: var(--accent-color);">04 Contact
-            </h4>
+            <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--accent-color);">Get In Touch</h4>
             <h2>Let's Create Together</h2>
-            <p>I'm always excited to discuss new backend projects, collaborate on innovative ideas, or simply connect
-                with fellow developers.</p>
+            <p>I'm always excited to discuss new backend engineering projects, AI/GenAI solutions, or potential opportunities.</p>
 
-            <div
-                style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
-
-                <div>
-                    <div>
-                        <h3
-                            style="color: var(--secondary-text); margin-bottom: 1rem; font-weight: 400; font-size: 0.9rem; text-transform: uppercase;">
-                            Email</h3>
-                        <a href="mailto:atharvashinde8111@gmail.com"
-                            style="font-size: 1.5rem; color: var(--text-color); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem;">atharvashinde8111@gmail.com</a>
-                    </div>
-
-                    <div>
-                        <h3
-                            style="color: var(--secondary-text); margin-bottom: 1rem; font-weight: 400; font-size: 0.9rem; text-transform: uppercase;">
-                            Socials</h3>
-                        <div style="display: flex; gap: 2rem;">
-                            <a href="https://www.linkedin.com/in/atharva-shinde-66a34425a" target="_blank"
-                                class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/atharvashinde57" target="_blank" class="social-icon"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://www.instagram.com/atharva_shinde57/?hl=en" target="_blank"
-                                class="social-icon"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-
+            <div class="contact-grid">
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:atharvashinde811@gmail.com">atharvashinde@gmail.com</a>
                 </div>
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <h3>Phone</h3>
+                    <a href="tel:7840954311">+91 7840954311</a>
+                </div>
+
+                <!-- Location Card -->
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <h3>Location</h3>
+                    <p>Pune, Maharashtra, India</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h3 style="color: var(--secondary-text); margin-bottom: 1.5rem; font-weight: 400; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">
+                    Social Profiles
+                </h3>
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://github.com/atharvashinde57" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/atharva-shinde-66a34425a" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/atharva_shinde57/?hl=en" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </section>
     </main>
 

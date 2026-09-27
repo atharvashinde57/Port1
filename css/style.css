@@ -104,19 +104,35 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
+    align-items: center;
 }
 
 .nav-item {
     text-decoration: none;
     color: var(--secondary-text);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
     position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 100%;
 }
 
 .nav-item:hover,
@@ -125,18 +141,12 @@ body {
 }
 
 .navbar.scrolled .nav-item {
-    color: #666666;
+    color: #555555;
 }
 
 .navbar.scrolled .nav-item:hover,
 .navbar.scrolled .nav-item.active {
     color: #000000;
-}
-
-.nav-number {
-    font-size: 0.7rem;
-    opacity: 0.6;
-    margin-bottom: 2px;
 }
 
 /* Page Layout */
@@ -343,4 +353,138 @@ p {
 /* Layout Utilities */
 .section {
     padding: 4rem 0;
+}
+
+/* Experience & Education Section */
+.section-title-wrapper {
+    margin-bottom: 2.5rem;
+}
+
+.timeline-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    border-color: rgba(0, 243, 255, 0.4);
+    border-left-color: var(--accent-color);
+    box-shadow: 0 5px 25px rgba(0, 243, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-role {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.timeline-company {
+    font-size: 1.05rem;
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+.timeline-location {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 1.2rem;
+}
+
+.experience-bullets {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.experience-bullets li {
+    position: relative;
+    padding-left: 1.4rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.experience-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0.3rem;
+    top: -0.1rem;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.experience-bullets li strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.achievement-icon {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.achievement-content h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.achievement-content p {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin-bottom: 0;
 }

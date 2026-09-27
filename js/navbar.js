@@ -8,19 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="nav-links">
                     <a href="index.html" class="nav-item">
-                        <span class="nav-number">01</span>
                         <span class="nav-text">Info</span>
                     </a>
                     <a href="projects.html" class="nav-item">
-                        <span class="nav-number">02</span>
                         <span class="nav-text">Projects</span>
                     </a>
                     <a href="skills.html" class="nav-item">
-                        <span class="nav-number">03</span>
                         <span class="nav-text">Skills</span>
                     </a>
                     <a href="contact.html" class="nav-item">
-                        <span class="nav-number">04</span>
                         <span class="nav-text">Contact</span>
                     </a>
                 </div>
